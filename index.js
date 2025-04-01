@@ -16,6 +16,10 @@ app.use(cors({
 app.use(express.json());
 app.use('/api/user', contactRouter);
 
+app.get('/', (req,res)=>{
+    res.send('<h1>Home Page</h1>')
+})
+
 app.listen(PORT, ()=>{
     console.log(`The Server is listening at PORT ${PORT}`);
 })
